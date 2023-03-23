@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Temperature conversion</title>
+ <link rel="stylesheet" href="styles.css" />
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono' ,sans-serif;
+    font-size: 18px;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(249, 195, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer{
+background-color: #fff;
+
+}
+.outer h4{
+    text-align: center;
+    padding-top: 20px;
+}
+.container{
+    width: 400px;
+    height: 150px;
+    background-color: #fff;
+    padding: 70px 50px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.cf{
+    width: 45%;
+}
+.fc{
+    width: 400px;
+    height: 150px;
+    background-color: #fff;
+    padding: 10px 50px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+    display:grid;
+    justify-content: center;
+
+}
+
+
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #d2d2d2;
+    outline: none;
+    margin-top:8px ;
+    padding: 0 10px;
+}
+
+select{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #d2d2d2;
+    outline: none;
+    margin-top:8px ;
+    padding: 0 10px;
+}
+.btn{
+    background-color: #161616;
+    color: #fff;
+    border-radius: 20px;
+}
+
+</style>
+</head>
+
+<body>
+ <form id="tempCon" onsubmit="calculateTemp(); return false">
+   <div class="outer">
+     <h4>Temperature Convertor</h4>
+   <div class="container">
+     <div class="cf">
+       <label for="degree">Degree</label>
+       <input type="number" id="degree" />
+     </div>
+     <div class="cf">
+       <label for="temp_type">Type</label>
+       <select name="temp_type" id="temp_type">
+         <option value="cel">Celsius</option>
+         <option value="far">Fahrenheit</option>
+       </select>
+     </div>
+   </div>
+   </div>
+   <div class="fc">
+     <label for="result">Result</label>
+     <input type="text" id="result" />
+     <input class="btn" type="submit" name="temp">
+   </div>
+ </form>
+ <script src="script.js"></script>
+</body>
+
+</html>
